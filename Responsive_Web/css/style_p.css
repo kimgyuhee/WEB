@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;}
+a { text-decoration: none;}
+li { list-style: none;}
+/* 이미지 태그를 만들면 아래쪽 알 수 없는 공백이 3px~5px 정도 생깁니다.
+img 태그는 inline-block 요소이기 때문입니다.
+이 문제를 해결하기 위해서는 
+1) display: block;
+2) vertical-align: top;
+3) 이미지를 가지고 있는 부모태그에 정확한 이미지 만큼의
+width와 height를 설정해줍니다.*/
+
+body {
+    font-size: 12px;
+    font-family: '맑은 고딕';
+}
+
+img {
+    vertical-align: top;
+}
+
+/*공통요소 */
+/* wrap*/
+#wrap {
+    margin: 20px auto 0;
+    border: 1px solid #ddd;
+}
+
+
+/* section */
+section {
+    padding: 20px;
+}
+
+aside img:hover {
+    border: 1px solid #000;
+}
+
+
+footer {
+    padding: 10px 0;
+    line-height: 25px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    clear: both;
+}
+
+
+
+/* 모바일 버전 */
+@media screen and (max-width:599px) {
+    #wrap {
+        width: 320px;
+    }
+
+    header {
+        width:100%; height: 100px;
+        background-image: url("../images/bg.png");
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: #ff0;
+        padding: 20px;
+    }
+
+    nav {
+        background: #c13333;
+    }
+
+    nav ul {
+        padding:5px 0;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        width: 100%; height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    section {
+        width: 300px;
+        padding: 10px;
+        line-height: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        margin: 20px 0;
+    }
+
+    aside {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    aside img {
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        width: 95%;
+    }
+}
+
+
+
+/* 테블릿 버전 */
+@media screen and (min-width:600px) and (max-width :1023px) {
+ 
+    #wrap {
+        width: 580px;
+
+    }
+
+    header{
+        width: 100%; height: 280px;
+        background-image: url("../images/bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        padding: 25px;
+        font-family: arial;
+        /* Arial, Helvetica, sans-serif; */
+        font-size: 3em;
+        color: #ff0;
+    }
+
+    nav {
+        background-color: #c13333;
+        width: 100%; height: 60px;
+    }
+
+    nav ul {
+        width:100%; height: 60px;
+        text-align: center;
+    }
+
+    nav li {
+        /* float: left; */
+        display: inline-block;
+    }
+
+    nav a {
+        display: block;
+        width: 120px;
+        line-height: 60px;
+        color: #fff;
+    }
+
+    section {
+        width: 540px;
+        line-height: 25px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        margin: 20px 0;
+    }
+
+    aside {
+        width: 580px;
+        background-color: #eee;
+        text-align: center;
+        padding: 5px 0s;
+    }
+
+    aside img {
+        border: 1px solid #ccc;
+        /* text-align: center; */
+        width: 32%;
+    }
+
+
+}
+
+
+/* 데스크탑 버전 */
+@media screen and (min-width: 1024px) {
+    
+    #wrap{
+        width: 960px; /* 960 grid*/
+    }
+
+    header {
+        width: 100%; height: 280px;
+        background-image: url("../images/bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        padding: 30px;
+        font-family: arial;
+        font-size: 4em;
+        color: #ff0;
+    }
+
+    nav {
+        background-color: #c13333;
+        height: 60px;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav a {
+        display: block;
+        width: 120px;
+        text-align: center;
+        line-height: 60px;
+        color: #fff;
+    }
+
+
+    section {
+        width: 700px;
+        float: left;
+        line-height: 25px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        margin: 20px 0;
+    }
+
+    aside {
+        float: right;
+        width: 200px; height: 550px;
+        background-color: #eee;
+        padding: 10px;
+    }
+
+    aside img {
+        border: 1px solid #ccc;
+        /* text-align : center */
+    }
+
+
+}

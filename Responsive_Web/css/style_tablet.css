@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0;}
+a { text-decoration: none;}
+li { list-style-type: none;}
+section { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+/* wrap */
+#wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* header */
+#wrap > header {
+    background-image: url(../images/bg.png);
+    /* background-size: 100% 283px; */
+    width: 100%; height: 283px;
+    position: relative;
+}
+
+#wrap > header > h1 {
+    position: absolute;
+    top: 25px; left: 20px;
+    color: yellow;
+}
+
+/* nav */
+#wrap > nav {
+    background-color:brown;
+    width: 100%; height: 80px;
+    margin: 0 auto;
+}
+
+#wrap > nav > ul {
+    width: 100%;
+    margin: 0 100px;
+}
+
+#wrap > nav > ul > li {
+    display: inline-block;
+    width: 150px; height: 100%;
+    text-align: center;
+    line-height: 80px;
+}
+
+
+#wrap > nav > ul > li > a {
+    font-size: 20px;
+    color: white;
+}
+
+#wrap > nav > ul > li:hover {
+    text-decoration: underline;
+    /* background-color:#369; */
+}
+
+/* section */
+#wrap > section {
+    width: 100%; height: 800px;
+    /* background-color: thistle; */
+}
+
+#wrap > section > h2 {
+    padding-top:25px;
+    padding-left: 20px;
+}
+
+#wrap > section > article {
+    width: 100%;
+}
+
+#wrap > section > article > h3 {
+    margin: 25px 20px;
+}
+
+#wrap > section > article > p {
+    margin: 25px 20px;
+    line-height: 200%;
+}
+
+/* aside */
+#wrap > aside {
+    width: 100%;
+}
+
+#wrap > aside > img {
+    display: inline-block;
+    margin: 3px;
+    width: 255px;
+}
+
+/* footer */
+#wrap > footer {
+    background-color: black;
+    width: 100%; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#wrap > footer > p, address {
+    margin: 5px;
+}
