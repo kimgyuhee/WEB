@@ -14,7 +14,7 @@ li { list-style-type: none;}
 
 .fixed_menu {
     width: 100px; height: 180px;
-    position: absolute;
+    position: fixed;
     top: 150px; right: 0px;
 }
 
@@ -57,18 +57,19 @@ header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%; height: 600px;
+    width: 100%; height: 650px;
 }
 
 header .banner {
     background-color: rgba(0, 0, 0, 0.534);
-    width: 100%; height: 120px;
+    width: 100%;
+    height: 120px;
     float: left;
 }
 
 header .header_box {
-    /* width: 950px;  */
-    height: 100px;
+    width: 950px; 
+    height: 120px;
     margin: 0 auto;
     position: relative;
 
@@ -163,6 +164,8 @@ header .header_text .header_button ul li{
     text-align: center;
     width: 100%; 
     /* height: 5000px; */
+    /* clear: both; */
+    margin-bottom: 50px;
 }
 
 
@@ -172,11 +175,8 @@ header .header_text .header_button ul li{
 } 
 
 .container > .topplace {
-    /* background-color: #f4f0e9; */
-    background-color: #ffebc7;
-    /* width: 1020px;  */
-    height: 550px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-bottom: 100px;
 }
 
 .container > .topplace h2 {
@@ -209,13 +209,14 @@ header .header_text .header_button ul li{
 /* about */
 
 .container .about {
-    margin: 50px auto;
+    margin: 0px auto;
 }
 
-.container .about_box {
-    width: 1020px;
-    margin: 50px auto;
-    clear: both;
+.container .about .about_box {
+    width: 1020px; height: 200px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 40px;
+    display: inline-block;
 }
 
 .container .about .call {
@@ -255,9 +256,9 @@ header .header_text .header_button ul li{
 
 
 .container .about .notice {
-    float: right;
+    margin-left: 30px;
+    float: left;
     width: 30%;
-    margin-right: 10px;
 }
 
 .container .about .notice p {
@@ -288,14 +289,6 @@ header .header_text .header_button ul li{
 .container .about .notice ul li span {
     font-size: 0.5em;
 }
-
-/* area */
-.area {
-    clear: both;
-    width: 100%; height: 100px;
-    /* background-color: burlywood; */
-}
-
 
 /* footer */
 footer {
@@ -339,8 +332,7 @@ footer .footer_content .impormation p, address{
 
 footer .sns {
     position: absolute;
-    right: 10px;
-    top: 50px;
+    right: 0; bottom: 0;
 }
 
 footer .sns ul li {
@@ -349,7 +341,9 @@ footer .sns ul li {
 }
 
 
-
+.footer_fix {
+    visibility: hidden;
+}
 
 
 
@@ -364,6 +358,9 @@ footer .sns ul li {
         visibility:hidden;
     }
 
+    header .header_box {
+        width: 100%;
+    }
 
     /* container */
     .container > .topplace ul li {
@@ -376,11 +373,12 @@ footer .sns ul li {
     }
 
     
-    .container .about_box {
+    .container .about .about_box {
         width: 100%;
     }
 
     .container .about .call {
+        width: 60%;
         margin-left: 20px;
     }
 
@@ -392,7 +390,7 @@ footer .sns ul li {
     }
 
     .container .about .advice p {
-        font-size: 21px;
+        font-size: 18px;
         position: absolute;
         top: 0px; left: 60px;
     }
@@ -405,8 +403,12 @@ footer .sns ul li {
         width: 100%;
     }
 
+    footer .sns {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
     footer .sns ul li {
-        padding: 2px;
+        padding: 3px;
     }
 
     footer .dropdown {
@@ -422,5 +424,164 @@ footer .sns ul li {
 
 
 @media all and (max-width:800px) { /* 모바일 */
+
+
+    /* header */
+    header {
+        width: 100%;
+        height: 500px;
+        background-image: url("../img/mainslide_mob02.jpg");
+        position: absolute;
+        top: 0;
+    }
+
+    .fixed_menu{
+        visibility:hidden;
+    }
+
+    .login{
+        visibility:hidden;
+    }
+
+    nav {
+        visibility:hidden;
+    }
+
+    .logo {
+        margin: 0 auto;
+        right: 0;
+    }
+
+    header .header_box {
+        width: 100%;
+    }
+
+    .header_text {
+        visibility: hidden;
+    }
+
+
+    /* container */
+    .container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 500px;
+    }
+
+    .container h1 {
+        display: block;
+        font-size: 18px;
+        color: #444;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .container b {
+        display: block;
+        font-size: 18px;
+        color: #444;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .container .topplace {
+        margin-bottom: 10px;
+    }
+
+    .container .topplace ul li {
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
     
+    .container .topplace ul li img{
+        width: 100%; height: 100%;
+    }
+    
+
+    /* about */
+
+    .container .about .about_box {
+        width: 100%; height: 0;
+        margin: 0; 
+        clear: both;
+    }
+    
+    .container .about .call {
+        float: none;
+        visibility: hidden;
+        display: none;
+    }
+    
+    .container .about .notice {
+        float: none;
+        width: 70%;
+        margin-top: 100px;
+    }
+    
+    .container .about .notice p {
+        text-align: left;
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+    
+    .container .about .notice ul {
+        height: 150px;
+    }
+    .container .about .notice ul li {
+        text-align: left;
+        width: 100%; height: 30px;
+        list-style-type:disc;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        line-height: 30px;
+        /* list-style-type: circle; */
+    }
+
+
+
+
+    /* footer */
+    footer {
+        border-top: 1px solid #ddd;
+        width: 100%; height: 350px;
+        
+        /* position: absolute;
+        top: 3500px; */
+    }
+
+    .impormation p, address {
+        display: block;
+    }
+
+    .sns {
+        width: 300px;
+        margin-bottom: 50px;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    footer .footer_fix {
+        width: 100%;
+        visibility: visible;
+        background-color: rgb(73, 69, 69);
+        position: fixed;
+        bottom: 0;
+    }
+
+    footer .footer_fix ul li {
+        width: 30%;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        color: white;
+        text-align: center;
+    }
+
+
+
 }
